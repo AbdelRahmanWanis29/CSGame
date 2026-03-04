@@ -8,4 +8,7 @@ public class EnergyStealCard extends Card{
         this.energy=energy;
     }
 
+    public int getEnergy() {
+        return this.energy;
+    }
 }

@@ -14,5 +14,19 @@ public class Card {
         this.lucky=lucky;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public int getRarity() {
+        return rarity;
+    }
+
+    public boolean isLucky() {
+        return lucky;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

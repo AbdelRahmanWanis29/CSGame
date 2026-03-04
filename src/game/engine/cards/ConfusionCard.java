@@ -8,4 +8,8 @@ public class ConfusionCard extends Card{
         super(name,description,rarity,lucky);
         this.duration=duration;
     }
+
+    public int getDuration() {
+        return this.duration;
+    }
 }
