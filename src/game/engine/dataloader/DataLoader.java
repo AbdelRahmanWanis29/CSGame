@@ -1,5 +1,6 @@
 package game.engine.dataloader;
 
+import game.engine.Role;
 import game.engine.cards.*;
 import game.engine.monsters.*;
 
@@ -44,6 +45,8 @@ public class DataLoader {
         return cards;
     }
 
+
+
     public static ArrayList<Monster> readMonster() throws IOException{
         ArrayList<Monster> monsters = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(MONSTERS_FILE_NAME));
@@ -53,20 +56,21 @@ public class DataLoader {
             String type = tokens[0];
             Monster m=null;
             switch (type) {
-                case "DASHER":m = new Dasher(tokens[1],tokens[2],tokens[3],Integer.parseInt(tokens[4]));
+                case "DASHER":m = new Dasher(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
-                case "DYNAMO":m = new Dynamo();
+                case "DYNAMO":m = new Dynamo(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
-                case "MULTITASKER":m = new MultiTasker();
+                case "MULTITASKER":m = new MultiTasker(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
-                case "SCHEMER":m = new Schemer();
+                case "SCHEMER":m = new Schemer(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
                 default:break;
             }
-            monsters.add(c);
+            monsters.add(m);
         }
         return monsters;
     }
+
 
 
 }
