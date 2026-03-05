@@ -1,8 +1,9 @@
 package game.engine.dataloader;
 
 import game.engine.cards.*;
-import game.engine.monsters.Monster;
+import game.engine.monsters.*;
 
+import javax.script.ScriptEngine;
 import javax.smartcardio.Card;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -41,6 +42,30 @@ public class DataLoader {
             cards.add(c);
         }
         return cards;
+    }
+
+    public static ArrayList<Monster> readMonster() throws IOException{
+        ArrayList<Monster> monsters = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new FileReader(MONSTERS_FILE_NAME));
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] tokens = line.split(",");
+            String type = tokens[0];
+            Monster m=null;
+            switch (type) {
+                case "DASHER":m = new Dasher(tokens[1],tokens[2],tokens[3],Integer.parseInt(tokens[4]));
+                    break;
+                case "DYNAMO":m = new Dynamo();
+                    break;
+                case "MULTITASKER":m = new MultiTasker();
+                    break;
+                case "SCHEMER":m = new Schemer();
+                    break;
+                default:break;
+            }
+            monsters.add(c);
+        }
+        return monsters;
     }
 
 
