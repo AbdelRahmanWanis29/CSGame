@@ -37,7 +37,7 @@ public class DataLoader {
                     break;
                 case "SHIELD":c = new ShieldCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]));
                     break;
-                case "CONFUSION":c = new ConfusionCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Integer.parseInt(tokens[5]));
+                case "CONFUSION":c = new ConfusionCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
                 default:break;
             }
@@ -89,7 +89,7 @@ public class DataLoader {
             switch (type) {
                 case "DASHER":m = new Dasher(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
-                case "DYNAMO":m = new Dynamo(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
+                case "DYNAMO":m = new Dynamo(tokens[1],tokens[2], Role.valueOf(tokens[3]),Math.abs(Integer.parseInt(tokens[4])));
                     break;
                 case "MULTITASKER":m = new MultiTasker(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;

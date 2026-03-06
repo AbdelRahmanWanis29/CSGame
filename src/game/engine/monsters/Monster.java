@@ -20,6 +20,8 @@ public abstract class Monster implements Comparable<Monster>{
     public void setEnergy(int energy) {
         if(energy >= 0) {
             this.energy = energy;
+        }else{
+            this.energy=0;
         }
     }
     public void setPosition(int position) {
@@ -70,7 +72,9 @@ public abstract class Monster implements Comparable<Monster>{
         this.description = description;
         this.originalRole = originalRole;
         role = originalRole;
-        this.energy = energy;
+        if(energy>0){
+            this.energy = energy;
+        }
         position = 0;
         frozen = false;
         shielded = false;
