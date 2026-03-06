@@ -41,7 +41,9 @@ public class DataLoader {
                     break;
                 default:break;
             }
-            cards.add(c);
+            if(c!=null){
+                cards.add(c);
+            }
         }
         return cards;
     }
@@ -78,7 +80,7 @@ public class DataLoader {
     }
 
 
-    public static ArrayList<Monster> readMonster() throws IOException{
+    public static ArrayList<Monster> readMonsters() throws IOException{
         ArrayList<Monster> monsters = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(MONSTERS_FILE_NAME));
         String line;
@@ -89,7 +91,7 @@ public class DataLoader {
             switch (type) {
                 case "DASHER":m = new Dasher(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
-                case "DYNAMO":m = new Dynamo(tokens[1],tokens[2], Role.valueOf(tokens[3]),Math.abs(Integer.parseInt(tokens[4])));
+                case "DYNAMO":m = new Dynamo(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
                 case "MULTITASKER":m = new MultiTasker(tokens[1],tokens[2], Role.valueOf(tokens[3]),Integer.parseInt(tokens[4]));
                     break;
@@ -97,7 +99,9 @@ public class DataLoader {
                     break;
                 default:break;
             }
-            monsters.add(m);
+            if(m!=null){
+                monsters.add(m);
+            }
         }
         return monsters;
     }

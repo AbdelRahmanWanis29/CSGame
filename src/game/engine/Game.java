@@ -22,7 +22,7 @@ public class Game {
     public Game(Role playerRole) throws IOException{
 
         this.board = new Board(DataLoader.readCards());
-        this.allMonsters = DataLoader.readMonster();
+        this.allMonsters = DataLoader.readMonsters();
         this.player = selectRandomMonsterByRole(playerRole);
         Role opponentRole;
         if(playerRole==Role.LAUGHER){
