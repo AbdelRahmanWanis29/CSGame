@@ -1,6 +1,6 @@
 package game.engine.exceptions;
 
-public class OutOfEnergyException extends RuntimeException {
+public class OutOfEnergyException extends GameActionException {
     private static final String MSG="Not Enough Energy for Power Up";
 
     public OutOfEnergyException(String message) {

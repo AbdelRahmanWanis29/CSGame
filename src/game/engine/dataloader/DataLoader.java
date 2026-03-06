@@ -37,7 +37,7 @@ public class DataLoader {
                     break;
                 case "SHIELD":c = new ShieldCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]));
                     break;
-                case "CONFUSION":c = new ConfusionCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Boolean.parseBoolean(tokens[4]),Integer.parseInt(tokens[5]));
+                case "CONFUSION":c = new ConfusionCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Integer.parseInt(tokens[5]));
                     break;
                 default:break;
             }
