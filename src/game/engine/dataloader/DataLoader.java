@@ -16,9 +16,9 @@ import java.util.ArrayList;
 
 public class DataLoader {
 
-    public final static String CARDS_FILE_NAME = "cards.csv";
-    public final static String MONSTERS_FILE_NAME = "monsters.csv";
-    public final static String CELLS_FILE_NAME = "cells.csv";
+    private final static String CARDS_FILE_NAME = "cards.csv";
+    private final static String MONSTERS_FILE_NAME = "monsters.csv";
+    private final static String CELLS_FILE_NAME = "cells.csv";
 
     public static ArrayList<game.engine.cards.Card> readCards() throws IOException{
         ArrayList<game.engine.cards.Card> cards = new ArrayList<>();

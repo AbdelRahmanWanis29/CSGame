@@ -12,7 +12,7 @@ public class Board {
 
     private static ArrayList<Monster> stationedMonsters;
     private static ArrayList<Card> originalCards;
-    private static ArrayList<Card> cards;
+    public static ArrayList<Card> cards;
 
     public Board(ArrayList<Card> readCards) {
 
