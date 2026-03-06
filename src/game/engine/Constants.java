@@ -4,7 +4,7 @@ public class Constants {
     final int BOARD_SIZE= 100;
     final int BOARD_ROWS=10;
     final int BOARD_COLS=10;
-    final int WINNING_POSITION=90;
+    final int WINNING_POSITION=99;
     final int STARTING_POSITION=0;
     final int[]  MONSTER_CELL_INDICES ={2, 18, 34, 54, 82, 88};
     final int[]  CONVEYOR_CELL_INDICES= { 6, 22 , 44, 52 , 66};
