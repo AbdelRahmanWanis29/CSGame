@@ -1,4 +1,6 @@
 package game.engine.interfaces;
 
-public class CanisterModifier {
+import game.engine.monsters.Monster;
+public interface CanisterModifier {
+
 }
