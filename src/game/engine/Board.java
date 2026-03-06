@@ -8,10 +8,6 @@ import java.util.ArrayList;
 
 public class Board {
 
-
-    public static final int BOARD_ROWS = 10;
-    public static final int BOARD_COLS = 10;
-
     private Cell[][] boardCells;
 
     private static ArrayList<Monster> stationedMonsters;
@@ -20,7 +16,7 @@ public class Board {
 
     public Board(ArrayList<Card> readCards) {
 
-        boardCells = new Cell[BOARD_ROWS][BOARD_COLS];
+        boardCells = new Cell[Constants.BOARD_ROWS][Constants.BOARD_COLS];
 
         stationedMonsters = new ArrayList<>();
         cards = new ArrayList<>();
