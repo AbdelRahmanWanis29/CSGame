@@ -8,13 +8,10 @@ import game.engine.cells.ConveyorBelt;
 import game.engine.cells.DoorCell;
 import game.engine.monsters.*;
 
-import javax.script.ScriptEngine;
-import javax.smartcardio.Card;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class DataLoader {
@@ -34,7 +31,7 @@ public class DataLoader {
             switch (type) {
                 case "SWAPPER":c = new SwapperCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]));
                     break;
-                case "STARTOVER":c = new StartOverCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Boolean.parseBoolean(tokens[4]),Integer.parseInt(tokens[5]));
+                case "STARTOVER":c = new StartOverCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Boolean.parseBoolean(tokens[4]));
                     break;
                 case "ENERGYSTEAL":c = new EnergyStealCard(tokens[1],tokens[2],Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
                     break;

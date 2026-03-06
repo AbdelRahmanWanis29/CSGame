@@ -18,8 +18,7 @@ public final class Constants {
 
     public static final int[] SOCK_CELL_INDICES = {32, 42, 74, 84, 98}; // start of sock
 
-    public static final int[] CARD_CELL_INDICES =
-            {4, 12, 28, 36, 48, 56, 60, 76, 86, 90};
+    public static final int[] CARD_CELL_INDICES = {4, 12, 28, 36, 48, 56, 60, 76, 86, 90};
 
 
     public static final int WINNING_ENERGY = 1000;
